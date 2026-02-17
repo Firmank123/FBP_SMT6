@@ -1,9 +1,10 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import { Inter } from "next/font/google";
+import styles from "@/styles/Home.module.css";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -14,16 +15,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
+      <main>
         <div className={styles.description}>
-          <h1 className={inter.className}>
-            Praktikum Next.js blablabla
-          </h1><br />
-          <p className={inter.className}>
-            Mahasiswa D4 TI
-          </p>
+          <h1 className={inter.className}>Praktikum Next.js blablabla</h1>
+          <br />
+          <p className={inter.className}>Mahasiswa D4 TI</p>
         </div>
+        <Link href="/about" className={styles.button}>
+          About me
+        </Link>
       </main>
     </>
-  )
+  );
 }
